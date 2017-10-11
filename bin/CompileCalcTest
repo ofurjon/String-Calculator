@@ -1,0 +1,3 @@
+#!/bin
+
+javac -classpath "src/test/resources/junit-4.12.jar;Classes" src/test/java/is/ru/CalculatorTest.java -d classes

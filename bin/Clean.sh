@@ -1,0 +1,3 @@
+#!/bin
+
+rm -r classes/*

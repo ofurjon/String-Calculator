@@ -1,0 +1,6 @@
+#!/bin
+
+./bin/Clean
+./bin/CompileCalc
+./bin/CompileCalcTest
+./bin/UnitTest
