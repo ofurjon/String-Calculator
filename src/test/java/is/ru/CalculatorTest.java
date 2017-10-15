@@ -33,4 +33,8 @@ public class CalculatorTest{
 	public void testIllegalArgumentException() {
 		Calculator.add("1,-1");
 	}
+	@Test
+	public void testToBigNumbers(){
+	    assertEquals(6, Calculator.add("1,2\n3,1001"));
+	}
 }

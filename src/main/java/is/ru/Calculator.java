@@ -34,13 +34,17 @@ public class Calculator{
 		}
 		if (hasNeg)
 		{
-			throw new IllegalArgumentException("negNumbers");
+			throw new IllegalArgumentException(
+				"Negative numbers not allowed" + negNumbers);
 		}
   	}
 
   	private static int toInt(String number)
   	{
-		return Integer.parseInt(number);
+		if(Integer.parseInt(number) > 1000)
+			return 0;
+		else
+			return Integer.parseInt(number);
   	}
 
     private static int sum(String[] numbers)
