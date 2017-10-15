@@ -1,6 +1,6 @@
-#!/bin
+#!/bin/bash
 
-./bin/Clean
-./bin/CompileCalc
-./bin/CompileCalcTest
-./bin/UnitTest
+./bin/clean
+./bin/compile
+./bin/compileTest
+./bin/unitTest
