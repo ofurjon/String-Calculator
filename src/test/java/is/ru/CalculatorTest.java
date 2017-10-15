@@ -37,4 +37,8 @@ public class CalculatorTest{
 	public void testToBigNumbers(){
 	    assertEquals(6, Calculator.add("1,2\n3,1001"));
 	}
+	@Test
+	public void testInputedDeliminator(){
+	    assertEquals(3, Calculator.add("//;\n1;2"));
+	}
 }

@@ -8,7 +8,15 @@ public class Calculator{
 	    	return 0;
 	    else
 	    {
-	    	if(has(text))
+	   	    if(text.contains("//"))
+	    	{
+	    		String delimAndText[] = text.split("\\n", 2);
+	    		String delim[] = delimAndText[0].split("//");
+	    		String numbers[] = delimAndText[1].split(delim[1] + "|,\\n");
+	    		checkForNeg(numbers);
+    			return sum(numbers);
+	    	}
+	    	else if(has(text))
 	    	{
 	    		String numbers[] = text.split(",|\\n");
 			  	checkForNeg(numbers);
