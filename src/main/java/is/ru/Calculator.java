@@ -11,19 +11,32 @@ public class Calculator{
     	if(has(text))
     	{
     		String numbers[] = text.split(",|\\n");
+		  	String negNumbers[] = new String[numbers.length];
+		  	int count = 0;
+		  	boolean hasNeg = false;
+		  	for (String number : numbers)
+			{
+				if(Integer.parseInt(number) < 0)
+				{
+					hasNeg = true;
+					negNumbers[count] = number;
+					count++;
+				}
+			}
+			if (hasNeg)
+			{
+				throw new IllegalArgumentException("negNumbers");
+			}
+
     		return sum(numbers);
     	}
     	return 1;
     }
   }
 
+
   private static int toInt(String number)
   {
-  	if(Integer.parseInt(number) < 0)
-  	{
-  		throw new IllegalArgumentException();
-  	}
-  	else
   		return Integer.parseInt(number);
   }
 
