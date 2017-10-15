@@ -19,7 +19,12 @@ public class Calculator{
 
   private static int toInt(String number)
   {
-  	return Integer.parseInt(number);
+  	if(Integer.parseInt(number) < 0)
+  	{
+  		throw new IllegalArgumentException();
+  	}
+  	else
+  		return Integer.parseInt(number);
   }
 
   private static int sum(String[] numbers)
