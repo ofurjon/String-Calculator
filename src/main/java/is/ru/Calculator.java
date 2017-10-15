@@ -8,7 +8,7 @@ public class Calculator{
     	return 0;
     else
     {
-    	if(text.contains(",") || text.contains("\n"))
+    	if(has(text))
     	{
     		String numbers[] = text.split(",|\\n");
     		return sum(numbers);
@@ -30,6 +30,10 @@ public class Calculator{
 		total += toInt(number);
 	}
 	return total;  
+  }
+  private static boolean has(String text)
+  {
+  	return (text.contains(",") || text.contains("\n"));
   }
 }
 
